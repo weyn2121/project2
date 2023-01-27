@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Online BookStore</title>
+    </h:head>
+    
+    <h:body style="background-color:#ccffcc">
+        <h:form>
+        <div >
+            
+            <p style="text-align: center; background-color: #ccffcc">Available Books </p></div>
+            <div align="center">
+
+            <h:dataTable  value="#{adminUserViewj.getUserList()}"
+                          var="con" style=" border: 1px red;"
+                          border="1">   
+                <h:column>
+                    <f:facet name="header">
+                        PASSWORD
+                    </f:facet>
+                    <h:commandLink value="#{con.password}" action="Userj"/>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header" class="text-center alert-warning">
+                     USER_NAME
+                    </f:facet>
+                    #{con.userName}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                      EMAIL
+                    </f:facet>
+                    #{con.email}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       ADDRESS
+                    </f:facet>
+                    #{con.address}
+                </h:column>
+                <h:column>
+       
+                 <f:facet name="header">
+                MOBILE_NUMBER       
+                   </f:facet>
+                     #{con.mobileNumber}
+                </h:column>
+               
+            </h:dataTable>
+    
+        </div>
+            </h:form>
+    </h:body>
+</html>
