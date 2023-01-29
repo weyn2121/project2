@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Online Book Store</title>
+        <style>
+        body{
+            background-image: url("imag/pic3.jpg");
+                     background-size: 90%;
+                     margin: 0px
+        }
+               
+      .buttc{
+       border-radius: 40px;
+
+    padding: 10px 40px;
+    background-color: #ccccff;
+    text-align: center;
+  
+}
+.wey2
+{
+    right: 100px;
+}
+        </style>
+    </h:head>
+    <h:body >
+        <h:form> 
+            <!--<fieldset style="width: 550px; margin:auto;padding: 20px; margin-top:150px; border-bottom-color: brown;"> -->
+                <div align="center">       
+        <h1>Book Deletion page</h1>
+        <label for="BookID" >BookID</label>
+        <h:inputText id="BookID" value="#{delete.bookID}"></h:inputText>
+            <br></br><br></br>
+      
+                <h:commandButton value="Submit" action="#{delete.bookDelete()}"></h:commandButton>
+                <h:commandButton value="Reset"></h:commandButton>
+            </div>
+ 
+             </h:form>            
+    </h:body>
+</html>

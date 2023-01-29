@@ -5,6 +5,30 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>User Register</title>
+        <style>
+        body{
+            background-image: url("imag/pic8_1.jpg");
+                     background-size: 90%;
+                     margin: 0px
+        }
+               
+      .buttc{
+       border-radius: 40px;
+
+    padding: 10px 40px;
+    background-color: #ccccff;
+    text-align: center;
+  
+}
+.wey2
+{
+    right: 100px;
+}
+.weyn
+{
+ position: relative;top: 30px;right: 20px;   
+}
+        </style>
     </h:head>
   <h:body>
         <h:form> 
@@ -12,7 +36,7 @@
                 <div align="center">       
                     <h1 align="center">User Register</h1>
                   <label for="UserName" class="cs">User Name</label>
-        <h:inputText id="UserName" value="#{userRegisterJ.userName}"></h:inputText>
+        <h:inputText  id="UserName" value="#{userRegisterJ.userName}"></h:inputText>
             <br></br><br></br>
 
       <label for="Password">Password</label>
@@ -28,9 +52,9 @@
              <label for="MobileNumber">Mobile Number</label>
              <h:inputText id="MobileNumber" value="#{userRegisterJ.mobileNumber}"></h:inputText>
             <br></br><br></br>
-            <div>
+            <div align="center">
                 <h:commandButton value="Submit" action="#{userRegisterJ.Registerer()}"></h:commandButton>
-                <h:commandButton value="Reset"></h:commandButton>
+                <h:commandButton value="Reset " action="UserRegister.xhtml"></h:commandButton>
             </div>
             </div>
             </fieldset>

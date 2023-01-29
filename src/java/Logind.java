@@ -19,9 +19,9 @@ public class Logind
                     status= rs.next();
                     
                     
-           }catch(Exception e)
+           }catch(Exception ex)
            {
-               System.out.println(e);
+               System.out.println(ex);
            }
            return status;
    }

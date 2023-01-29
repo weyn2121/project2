@@ -7,32 +7,31 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-
 @ManagedBean
 
 @SessionScoped
-public class AdminUserViewj {
+public class buyBook  {
 
-    public List<UserRegisterJ> getUserList() {
-        List<UserRegisterJ> list = new ArrayList<>();
+    public List<BuyBookBean> getBuyBookList() {
+        List<BuyBookBean> list = new ArrayList<>();
         try {
         
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-            ResultSet rs = con.createStatement().executeQuery("select * from USERDATA");
+            ResultSet rs = con.createStatement().executeQuery("select * from CART");
             while (rs.next()) {
-                UserRegisterJ admin = new UserRegisterJ();
-                admin.setUserName(rs.getString(1));
-                admin.setPassword(rs.getString(2));
-                admin.setEmail(rs.getString(3));
-                admin.setAddress(rs.getString(4));
-                admin.setMobileNumber(rs.getString(5));
+                BuyBookBean buyer = new BuyBookBean();
+                buyer.setBookID(rs.getString(1));
+                buyer.setBookCategory(rs.getString(2));
+                buyer.setBookName(rs.getString(3));
+                buyer.setAuthorName(rs.getString(4));
+                buyer.setPrice(rs.getString(5));
                 
                 
                 
                 //course[1]=rs.getString("COURSE");
                 //usr.setCourse(course);
-                list.add(admin);
+                list.add(buyer);
             }
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("error");
@@ -42,3 +41,4 @@ public class AdminUserViewj {
     }
 
 }
+//insert into cart(select *from usertw where bookid=? ,book_name=?);

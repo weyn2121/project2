@@ -6,29 +6,77 @@
     <h:head>
         <title>Online Book Store</title>
     </h:head>
-    
-    <h:body style="background-color:#ffcc99">
-        <h:form>
+     <style>
+         .wyn{
+                        position: fixed;
+                        right: 900px;
+                        top: 260px;
+                        color:black;
+                         font-style:italic;
+                        font-size: 1rem; 
+                       
+                    }
+                    .wyn1{
+                        position: fixed;
+                        right: 900px;
+                        top: 290px;
+                        color:black;
+                         font-style:italic;
+                        font-size: 1rem; 
+                       
+                    }
+                    .wyn2{
+                        position: fixed;
+                        right: 900px;
+                        top: 320px;
+                        color:black;
+                         font-style:italic;
+                        font-size: 1rem; 
+                       
+                    }
+                    .wyn3{
+                        position: fixed;
+                        right: 900px;
+                        top: 350px;
+                        color:black;
+                         font-style:italic;
+                        font-size: 1rem; 
+                       
+                    }
+                     .wyn4{
+                        position: fixed;
+                        right: 900px;
+                        top: 380px;
+                        color:black;
+                         font-style:italic;
+                        font-size: 1rem; 
+                       
+                    }
+                  
+                   </style>
+   
+    <h:body style="background-color:#ccffcc">
+      <h:form>   
         <div >
             
-            <p style="text-align: center; background-color: #ffcc99">Available Books </p></div>
-            <div align="center">
-
+            <p style="text-align: center; background-color: #ccffcc">Available Books </p></div>
+           
+          <div align="center">
             <h:dataTable  value="#{userBookViewj.getBookList()}"
                           var="wyn" style=" border: 1px red;"
                           border="1">   
-                <h:column>
+                
+                     <h:column>
                     <f:facet name="header">
-                        BOOKID 
+                       BOOKID 
                     </f:facet>
-                    <h:commandLink value="#{wyn.bookID}" action="#{userLoginValidator.update(column.bookID)}"/>
+                    #{wyn. bookID}
                 </h:column>
-
                 <h:column>
                     <f:facet name="header">
                       BOOK_CATEGORY
                     </f:facet>
-                #{wyn.bookCategory}
+                    #{wyn.bookCategory}
                 </h:column>
 
                 <h:column>
@@ -51,8 +99,36 @@
                 </h:column>
                
             </h:dataTable>
-    
-        </div>
-            </h:form>
+      </div>
+     
+            <br></br><br></br>
+            <div align="center">
+                    <h1>Choose book you want to buy</h1>
+        <label for="BookID" >BookID</label>
+        <h:inputText  id="BookID" value="#{buyBookValidator.bookID}"></h:inputText>
+            <br></br><br></br>
+            <label for="BookName" >Book Name</label>
+            <h:inputText  id="BookName" value="#{buyBookValidator.bookName}"></h:inputText>
+           </div>
+            <br></br><br></br>
+            
+                <h:commandButton value="Submit" action="#{buyBookValidator.buybook(buyBookValidator.bookID,buyBookValidator.bookName)}"></h:commandButton>
+                <h:commandButton value="Reset"></h:commandButton>
+           
+                
+                
+                        <label for="id" >BookID</label>
+        <h:inputText  id="id" value="#{addBooks.id}"></h:inputText>
+            <br></br><br></br>
+            <label for="name" >Book Name</label>
+            <h:inputText  id="name" value="#{addBooks.name}"></h:inputText>
+      
+            <br></br><br></br>
+            
+                <h:commandButton value="Submit" action="#{addBooks.bookstore()}"></h:commandButton>
+                <h:commandButton value="Reset"></h:commandButton>
+           
+        </h:form>     
     </h:body>
+       
 </html>

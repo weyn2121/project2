@@ -4,16 +4,40 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
         
-        <title>Online Book Store</title></h:head>
-   
-    
+        <title>Online Book Store</title>
+    <style>
+        body{
+            background-image: url("imag/pic8.jpg");
+                     background-size: 100%;
+                     margin: 0px
+        }
+               
+      .buttc{
+       border-radius: 40px;
+
+    padding: 10px 40px;
+    background-color: #ffccff;
+    text-align: center;
+    margin-right:70px; 
+    margin-top: 70px;
+  
+}
+.bct
+{
+    background-color: #eef93b   
+}
+
+
+
+    </style>
+    </h:head>
     <h:body>
         <h1 align="center">WELCOME TO ONLINE BOOK STORE</h1>
         <h:form >
             <div align="center">
-     <h:commandButton value="Admin" action="Admin.xhtml"></h:commandButton>
-     <h:commandButton value="Register" action="UserRegister.xhtml"></h:commandButton>
-        <h:commandButton value="Login" action="User.xhtml"></h:commandButton>
+                <h:commandButton class="buttc" value="Admin" action="Admin.xhtml"></h:commandButton>
+                <h:commandButton class="buttc" value="Register" action="UserRegister.xhtml"></h:commandButton>
+        <h:commandButton class="buttc" value="Login" action="User.xhtml"></h:commandButton>
         </div>
         </h:form>
     </h:body>

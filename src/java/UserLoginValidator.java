@@ -29,6 +29,7 @@ private String user;
     public void setPassword(String Password) {
         this.Password = Password;
     }
+  
     public String ValidateUserNamePassword(String str,String str1)
     {
         user=str;
@@ -59,7 +60,5 @@ private String user;
                     
       
       return "UserBookViewj";
-             
-
            }
 }
