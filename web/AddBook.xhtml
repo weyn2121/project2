@@ -6,54 +6,102 @@
         <title>Online Book Store</title>
         <style>
         body{
-            background-image: url("imag/pic3.jpg");
+            background-image: url("imag/pic5.jpg");
                      background-size: 90%;
                      margin: 0px
         }
                
-      .buttc{
-       border-radius: 40px;
+           .buttc{
+       border-radius: 10px;
 
-    padding: 10px 40px;
-    background-color: #ccccff;
+    padding: 5px 10px;
+    background-color: #ffcccc;
     text-align: center;
-  
+    margin-left: 10px;
+  margin-top: 20px;
 }
 .weyn
 {
- position: relative;top: 8px;right: 40px;   
+ position: relative;top: 13px;left: 60px; 
+ width:150px;
+height: 15px;
 }
+.weyn1
+{
+ position: relative;top: 14px;left: 40px;
+  width:150px;
+height: 15px;
+}
+.weyn2
+{
+ position: relative;top: 15px;left:50px; 
+width:150px;
+height: 15px;
+}
+.weyn3
+{
+ position: relative;top: 16px;left: 45px; 
+ width:150px;
+height: 15px;
+}
+.weyn4
+{
+ position: relative;top: 17px;left: 73px; 
+ width:150px;
+height: 15px;
+}
+
+.ui
+{
+position: relative;top: 13px;left: 5px;     
+}
+.ui1
+{
+position: relative;top: 14px;left: 29px;     
+}
+.ui2
+{
+position: relative;top: 15px;left: 20px;     
+}
+.ui3
+{
+position: relative;top: 16px;left: 24px;     
+}
+.ui4
+{
+ position: relative;top: 17px;left: 0px;   
+}
+
 
         </style>
         
     </h:head>
     <h:body >
         <h:form> 
-            <!--<fieldset style="width: 550px; margin:auto;padding: 20px; margin-top:150px; border-bottom-color: brown;"> -->
+           
                 <div align="center">       
         <h1>Book Registration page</h1>
-        <label for="BookID" >BookID</label>
-        <h:inputText  id="BookID" value="#{addBooks.bookID}"></h:inputText>
+        <label  for="BookID" class="ui">BookID</label>
+        <h:inputText class="weyn" id="BookID" value="#{addBooks.bookID}"></h:inputText>
             <br></br><br></br>
-      <label for="BookCategory">Book Category</label>
-      <h:inputText id="BookCategory" value="#{addBooks.bookCategory}">Book Category</h:inputText>
+            <label for="BookCategory" class="ui1">Book Category</label>
+      <h:inputText class="weyn1" id="BookCategory" value="#{addBooks.bookCategory}">Book Category</h:inputText>
             <br></br><br></br>
-            <label for="BookName" >Book Name</label>
-            <h:inputText id="BookName" value="#{addBooks.bookName}"></h:inputText>
+            <label for="BookName" class="ui2">Book Name</label>
+            <h:inputText class="weyn2" id="BookName" value="#{addBooks.bookName}"></h:inputText>
             <br></br><br></br>
-             <label for="AuthorName">Author Name</label>
-             <h:inputText id="AuthorName" value="#{addBooks.authorName}"></h:inputText>
+             <label for="AuthorName" class="ui3">Author Name</label>
+             <h:inputText class="weyn3" id="AuthorName" value="#{addBooks.authorName}"></h:inputText>
             <br></br><br></br> 
-             <label for="Price">Price</label>
-             <h:inputText id="Price" value="#{addBooks.price}"></h:inputText>
+             <label for="Price" class="ui4">Price</label>
+             <h:inputText class="weyn4" id="Price" value="#{addBooks.price}"></h:inputText>
             <br></br><br></br>
-            <div class="btn3">
-                <h:commandButton value="Submit" action="#{addBooks.bookInserter()}"></h:commandButton>
-                <h:commandButton value="Reset"></h:commandButton>
+            <div >
+                <h:commandButton class="buttc" value="Submit" action="#{addBooks.bookInserter()}"></h:commandButton>
+                <h:commandButton class="buttc" value="Back" action="AdminPage"></h:commandButton>
             </div>
             </div>
-            <!--</fieldset>-->
+           
              </h:form>            
     </h:body>
 </html>
-

@@ -36,8 +36,8 @@ private String user;
     
           DBConnection dbcon=new DBConnection();
           Connection con;
-       
-          try {
+                 try {
+
               con = dbcon.connMethod();
             
               PreparedStatement ps=con.prepareStatement("select USERNAME,PASSWORD from USERDATA where USERNAME=? and password=?");

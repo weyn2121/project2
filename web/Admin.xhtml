@@ -10,14 +10,37 @@
                      background-size: 90%;
                      margin: 0px
         }
-            .buttc{
-       border-radius: 40px;
+           .buttc{
+       border-radius: 10px;
 
-    padding: 10px 40px;
+    padding: 5px 10px;
     background-color: #ccccff;
     text-align: center;
-  
+    margin-left: 10px;
+  margin-top: 20px;
 }
+.weyn
+{
+ position: relative;top: 13px;left: 0px; 
+ width:100px;
+height: 15px;
+}
+.weyn1
+{
+ position: relative;top: 14px;left: 0px;
+  width:100px;
+height: 15px;
+}
+.ui
+{
+position: relative;top: 13px;left: -20px;     
+}
+.ui1
+{
+position: relative;top: 14px;left: -20px;     
+}
+
+
         </style>
     </h:head>
     <h:body >
@@ -25,16 +48,16 @@
             <fieldset style="width: 550px; margin:auto;padding: 20px; margin-top:150px; border-bottom-color: brown;"> 
                 <div align="center">       
         <h1>Admin login page</h1>
-        <h:outputLabel value="UserName"/>
-        <h:inputText id="UserName" value="#{loginvalidator.userName}"></h:inputText>
+        <h:outputLabel value="UserName" class="ui" />
+        <h:inputText class="weyn" id="UserName" value="#{loginvalidator.userName}"></h:inputText>
             <br></br><br></br>
             
-        <h:outputLabel value="Password"/>
-        <h:inputSecret id="Password" value="#{loginvalidator.password}"></h:inputSecret>
+        <h:outputLabel value="Password" class="ui1"/>
+        <h:inputSecret  class="weyn1"  id="Password" value="#{loginvalidator.password}"></h:inputSecret>
             <br></br><br></br>
             <div >
-                <h:commandButton value="Submit" action="#{loginvalidator.ValidateUserNamePassword()}"></h:commandButton>
-                <h:commandButton value="Reset" action="Admin"></h:commandButton>
+                <h:commandButton class="buttc" value="Submit" action="#{loginvalidator.ValidateUserNamePassword()}"></h:commandButton>
+                <h:commandButton class="buttc" value="Back" action="index"></h:commandButton>
             </div>
             </div>
             </fieldset>

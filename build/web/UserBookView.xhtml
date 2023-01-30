@@ -7,59 +7,23 @@
         <title>Online Book Store</title>
     </h:head>
      <style>
-         .wyn{
-                        position: fixed;
-                        right: 900px;
-                        top: 260px;
-                        color:black;
-                         font-style:italic;
-                        font-size: 1rem; 
                        
-                    }
-                    .wyn1{
-                        position: fixed;
-                        right: 900px;
-                        top: 290px;
-                        color:black;
-                         font-style:italic;
-                        font-size: 1rem; 
-                       
-                    }
-                    .wyn2{
-                        position: fixed;
-                        right: 900px;
-                        top: 320px;
-                        color:black;
-                         font-style:italic;
-                        font-size: 1rem; 
-                       
-                    }
-                    .wyn3{
-                        position: fixed;
-                        right: 900px;
-                        top: 350px;
-                        color:black;
-                         font-style:italic;
-                        font-size: 1rem; 
-                       
-                    }
-                     .wyn4{
-                        position: fixed;
-                        right: 900px;
-                        top: 380px;
-                        color:black;
-                         font-style:italic;
-                        font-size: 1rem; 
-                       
-                    }
+      .buttc{
+       border-radius: 40px;
+
+    padding: 10px 40px;
+    background-color: #ccccff;
+    text-align: center;
+  margin-left: 30px;
+}
                   
                    </style>
    
-    <h:body style="background-color:#ccffcc">
+    <h:body style="background-color:#ffccff">
       <h:form>   
         <div >
             
-            <p style="text-align: center; background-color: #ccffcc">Available Books </p></div>
+            <p style="text-align: center; background-color: #ffccff">Available Books </p></div>
            
           <div align="center">
             <h:dataTable  value="#{userBookViewj.getBookList()}"
@@ -111,22 +75,13 @@
             <h:inputText  id="BookName" value="#{buyBookValidator.bookName}"></h:inputText>
            </div>
             <br></br><br></br>
-            
-                <h:commandButton value="Submit" action="#{buyBookValidator.buybook(buyBookValidator.bookID,buyBookValidator.bookName)}"></h:commandButton>
-                <h:commandButton value="Reset"></h:commandButton>
-           
+            <div align="center">
+                <h:commandButton class="buttc" value="Submit" action="#{buyBookValidator.buybook(buyBookValidator.bookID,buyBookValidator.bookName)}"></h:commandButton>
+                <h:commandButton class="buttc"  value="Back" action="index.xtml"></h:commandButton>
+           </div>
                 
                 
-                        <label for="id" >BookID</label>
-        <h:inputText  id="id" value="#{addBooks.id}"></h:inputText>
-            <br></br><br></br>
-            <label for="name" >Book Name</label>
-            <h:inputText  id="name" value="#{addBooks.name}"></h:inputText>
-      
-            <br></br><br></br>
-            
-                <h:commandButton value="Submit" action="#{addBooks.bookstore()}"></h:commandButton>
-                <h:commandButton value="Reset"></h:commandButton>
+
            
         </h:form>     
     </h:body>

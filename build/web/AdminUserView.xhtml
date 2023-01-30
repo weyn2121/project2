@@ -30,23 +30,24 @@
             <p style="text-align: center">Available Books </p></div>
             <div align="center">
 
-            <h:dataTable  value="#{adminUserViewj.getUserList()}"
+            <h:dataTable  value="#{adminUserView.getUserList()}"
                           var="wyn" style=" border: 1px red;"
-                          border="1">   
+                          border="1">
+                 <h:column>
+                    <f:facet name="header">
+                     USER_NAME
+                    </f:facet>
+                    #{wyn.userName}
+                </h:column>
                   <h:column>
-                    <f:facet name="header" class="text-center alert-warning">
-                   PASSWORD
+                      <f:facet name="header">
+                      PASSWORD      
                     </f:facet>
                     #{wyn.password}
                 </h:column>
                 
                 
-                <h:column>
-                    <f:facet name="header" class="text-center alert-warning">
-                     USER_NAME
-                    </f:facet>
-                    #{wyn.userName}
-                </h:column>
+               
 
                 <h:column>
                     <f:facet name="header">

@@ -1,5 +1,3 @@
-
-
 import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -42,5 +40,3 @@ public class Delete implements Serializable{
   }
    
 }
-
-

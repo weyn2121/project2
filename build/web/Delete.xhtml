@@ -15,27 +15,42 @@
        border-radius: 40px;
 
     padding: 10px 40px;
-    background-color: #ccccff;
+    background-color: #ffcccc;
     text-align: center;
   
 }
-.wey2
+.weyn
 {
-    right: 100px;
+ position: relative;top: 13px;left: 20px; 
+ width:150px;
+height: 15px;
+}
+.ui
+{
+position: relative;top: 13px;left: 5px;     
+}
+  .buttc{
+       border-radius: 10px;
+
+    padding: 5px 10px;
+    background-color: #ccccff;
+    text-align: center;
+    margin-left: 10px;
+  margin-top: 20px;
 }
         </style>
     </h:head>
     <h:body >
         <h:form> 
-            <!--<fieldset style="width: 550px; margin:auto;padding: 20px; margin-top:150px; border-bottom-color: brown;"> -->
+         
                 <div align="center">       
         <h1>Book Deletion page</h1>
-        <label for="BookID" >BookID</label>
-        <h:inputText id="BookID" value="#{delete.bookID}"></h:inputText>
+        <label class="ui" for="BookID" >BookID</label>
+        <h:inputText class="weyn" id="BookID" value="#{delete.bookID}"></h:inputText>
             <br></br><br></br>
       
-                <h:commandButton value="Submit" action="#{delete.bookDelete()}"></h:commandButton>
-                <h:commandButton value="Reset"></h:commandButton>
+                <h:commandButton class="buttc" value="Submit" action="#{delete.bookDelete()}"></h:commandButton>
+                <h:commandButton class="buttc" value="Back" action="AdminPage.xhtml"></h:commandButton>
             </div>
  
              </h:form>            

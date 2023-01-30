@@ -7,27 +7,72 @@
         <title>User Register</title>
         <style>
         body{
-            background-image: url("imag/pic8_1.jpg");
+            background-image: url("imag/pic5.jpg");
                      background-size: 90%;
                      margin: 0px
         }
                
-      .buttc{
-       border-radius: 40px;
+          .buttc{
+       border-radius: 10px;
 
-    padding: 10px 40px;
+    padding: 5px 10px;
     background-color: #ccccff;
     text-align: center;
-  
-}
-.wey2
-{
-    right: 100px;
+    margin-left: 10px;
+  margin-top: 20px;
 }
 .weyn
 {
- position: relative;top: 30px;right: 20px;   
+ position: relative;top: 13px;left: 36px; 
+ width:150px;
+height: 15px;
 }
+.weyn1
+{
+ position: relative;top: 14px;left: 40px;
+  width:150px;
+height: 15px;
+}
+.weyn2
+{
+ position: relative;top: 15px;left:50px; 
+width:150px;
+height: 15px;
+}
+.weyn3
+{
+ position: relative;top: 16px;left: 45px; 
+ width:150px;
+height: 15px;
+}
+.weyn4
+{
+ position: relative;top: 17px;left:20px; 
+ width:150px;
+height: 15px;
+}
+.ui
+{
+position: relative;top: 13px;left: -15px;     
+}
+.ui1
+{
+position: relative;top: 14px;left: -20px;     
+}
+.ui2
+{
+position: relative;top: 15px;left: -30px;     
+}
+.ui3
+{
+position: relative;top: 16px;left: -25px;     
+}
+.ui4
+{
+ position: relative;top: 17px;left: 0px;   
+}
+
+
         </style>
     </h:head>
   <h:body>
@@ -35,26 +80,26 @@
             <fieldset style="width: 550px; margin:auto;padding: 20px; margin-top:150px; border-bottom-color: brown;">
                 <div align="center">       
                     <h1 align="center">User Register</h1>
-                  <label for="UserName" class="cs">User Name</label>
-        <h:inputText  id="UserName" value="#{userRegisterJ.userName}"></h:inputText>
+                  <label for="UserName" class="ui">User Name</label>
+                  <h:inputText class="weyn"  id="UserName" value="#{userRegisterJ.userName}"></h:inputText>
             <br></br><br></br>
 
-      <label for="Password">Password</label>
-      <h:inputSecret id="Password" value="#{userRegisterJ.password}"></h:inputSecret>
+      <label for="Password" class="ui1">Password</label>
+      <h:inputSecret  class="weyn1" id="Password" value="#{userRegisterJ.password}"></h:inputSecret>
             <br></br><br></br>
           
-            <label for="Email">Email</label>
-            <h:inputText id="Email" value="#{userRegisterJ.email}"></h:inputText>
+            <label for="Email" class="ui2">Email</label>
+            <h:inputText class="weyn2" id="Email" value="#{userRegisterJ.email}"></h:inputText>
             <br></br><br></br>
-             <label for="Address">Address</label>
-             <h:inputText id="Address" value="#{userRegisterJ.address}"></h:inputText>
+             <label for="Address" class="ui3">Address</label>
+             <h:inputText class="weyn3" id="Address" value="#{userRegisterJ.address}"></h:inputText>
             <br></br><br></br> 
-             <label for="MobileNumber">Mobile Number</label>
-             <h:inputText id="MobileNumber" value="#{userRegisterJ.mobileNumber}"></h:inputText>
+             <label for="MobileNumber" class="ui4">Mobile Number</label>
+             <h:inputText class="weyn4" id="MobileNumber" value="#{userRegisterJ.mobileNumber}"></h:inputText>
             <br></br><br></br>
             <div align="center">
-                <h:commandButton value="Submit" action="#{userRegisterJ.Registerer()}"></h:commandButton>
-                <h:commandButton value="Reset " action="UserRegister.xhtml"></h:commandButton>
+                <h:commandButton class="buttc" value="Submit" action="#{userRegisterJ.Registerer()}"></h:commandButton>
+                <h:commandButton class="buttc" value="Back " action="index.xhtml"></h:commandButton>
             </div>
             </div>
             </fieldset>
